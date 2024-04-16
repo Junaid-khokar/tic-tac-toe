@@ -20,7 +20,7 @@ document.addEventListener('click',function(e){
                 i++;
                 document.getElementById('info').innerText = " It's Move For X";
                 isWin();
-        }
+            }
         }
         else
         {
@@ -44,60 +44,106 @@ document.addEventListener('click',function(e){
     
     if(e.target.innerHTML == '' && player == 1)
     {
-        
+        if(draw==0)
+        {
+            click.play();
+            e.target.innerHTML = "X" ;
+            document.getElementById('info').innerText = " Computer Is Thinking....";
+            isWin();
             if(draw==0)
             {
-                click.play();
-                e.target.innerHTML = "X" ;
-               
-                document.getElementById('info').innerText = " Computer Is Thinking....";
-                isWin();
-                if(draw==0)
-                {
-                    
-                   delay();
-                }
+                delay();
             }
-        
-        
-        
+        }
     }
     
     
 })
 
-function computer()
-{
+function computer() {
     
-    var A = random();
-    console.log(A);
-    if(A!=8 && A!=12)
-    {
-        var check = document.getElementsByTagName('div')[A] ;
-        console.log("before check");
-        if(check.innerHTML == "")
-        {
-            console.log("after check");
-            click.play();
-            check.innerHTML = "O" ;
-            document.getElementById('info').innerText = " It's Move For X";
-            isWin();
-        }
-        else{
-            computer();
+    for (let index = 5; index <= 15; index++) {
+        if (index !== 8 && index !== 12) {
+            if (document.getElementsByTagName('div')[index].innerText === "") {
+                document.getElementsByTagName('div')[index].innerText = "O";
+                if (isWinningMove("O")) {
+                    click.play();
+                    document.getElementById('info').innerText = " It's Move For X";
+                    isWin();
+                    return;
+                } else {
+                    document.getElementsByTagName('div')[index].innerText = "";
+                }
+            }
         }
     }
-    else{
-        computer();
+
+    
+    for (let index = 5; index <= 15; index++) {
+        if (index !== 8 && index !== 12) {
+            if (document.getElementsByTagName('div')[index].innerText === "") {
+                document.getElementsByTagName('div')[index].innerText = "X";
+                if (isWinningMove("X")) {
+                    click.play();
+                    document.getElementsByTagName('div')[index].innerText = "O";
+                    document.getElementById('info').innerText = " It's Move For X";
+                    isWin();
+                    return;
+                } else {
+                    document.getElementsByTagName('div')[index].innerText = "";
+                }
+            }
+        }
+    }
+
+   
+    for (let index = 5; index <= 15; index++) {
+        if (index !== 8 && index !== 12) {
+            if (document.getElementsByTagName('div')[index].innerText === "") {
+                document.getElementsByTagName('div')[index].innerText = "O";
+                click.play();
+                document.getElementById('info').innerText = " It's Move For X";
+                isWin();
+                return;
+            }
+        }
     }
 }
+
+function isWinningMove(player) {
+    var board = [];
+    for (let i = 5; i <= 15; i += 4) {
+        let row = [];
+        for (let j = i; j <= i + 2; j++) {
+            row.push(document.getElementsByTagName('div')[j].innerText);
+        }
+        board.push(row);
+    }
+
+
+    for (let i = 0; i < 3; i++) {
+        if ((board[i][0] === player && board[i][1] === player && board[i][2] === player) ||
+            (board[0][i] === player && board[1][i] === player && board[2][i] === player)) {
+            return true;
+        }
+    }
+
+  
+    if ((board[0][0] === player && board[1][1] === player && board[2][2] === player) ||
+        (board[0][2] === player && board[1][1] === player && board[2][0] === player)) {
+        return true;
+    }
+
+    return false;
+}
+
+
 function delay()
 {
     setTimeout(function()
     {
         computer();
     },3000)
-
 }
 
 function reset()
@@ -115,15 +161,16 @@ function reset()
     c = 0 ;
     draw = 0 ;
 }
+
 function back()
 {
     reset();
     var select = document.getElementById("select");
     select.style.display = "block";
 }
+
 function isWin()
 {
-    
     c++;
     var div1 = document.getElementsByTagName('div')[5].innerText; 
     var div2 = document.getElementsByTagName('div')[6].innerText;
@@ -199,8 +246,3 @@ function twoPlayer()
     player = 2 ;
 }
 
-function random()
-{
-    var random = Math.floor((Math.random()*10)+5) ;
-    return random ;
-}

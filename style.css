@@ -1,0 +1,140 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: rgb(203, 164, 255);
+}
+
+#container
+{
+    width:70vmin ;
+    height: 70vmin;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vmin;
+    display: flex;
+}
+.inner
+{
+    background-color: blueviolet;
+    margin: .5vmin;
+    margin-top: 1vmin;
+    height: 23vmin;
+    width: 23vmin;
+   text-align: center;
+   cursor: pointer;
+   font-size: 20vmin;
+    font-family: monospace;
+    font-weight: bolder;
+    border-radius: 1rem;
+    box-shadow: inset 0 0  4vmin rgb(32, 1, 47);
+}
+#first  :hover
+{
+    background-color: rgb(83, 3, 124);
+}
+#second  :hover
+{
+    background-color: rgb(83, 3, 124);
+}
+#third :hover
+{
+    background-color: rgb(83, 3, 124);
+}
+#btn
+{
+    font-size: 5vmin;
+    border: .15rem solid;
+    height: 8vmin;
+    width: 20vmin;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10rem;
+    margin-top: 5vmin;
+    background-color: rgb(153, 44, 207);
+    box-shadow: inset 0 0  4vmin rgb(45, 36, 50);
+    margin-left: 1vw;
+}
+.button{
+    text-align: center;
+}
+#back
+{
+    font-size: 5vmin;
+    border: .15rem solid;
+    height: 8vmin;
+    width: 20vmin;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10rem;
+    margin-top: 5vmin;
+    background-color: rgb(153, 44, 207);
+    box-shadow: inset 0 0  4vmin rgb(45, 36, 50);
+    margin-left: 10vw;
+}
+#btn:hover{
+    background-color: rgb(147, 52, 194);
+}
+h1
+{
+    font-size: 7vmin;
+    text-align: center;
+    margin-top: 2vmin;
+}
+.brLeft
+{
+    border-left: none;
+}
+.brRight{
+    border-right: none;
+}
+.brUpper
+{
+    border-top: none;
+}
+.brBottom
+{
+    border-bottom: none;
+}
+
+#select
+{
+    height: 95vh;
+    width: 90vw;
+    background-color: rgb(89, 24, 122);
+    position: absolute;
+    margin-left: 5vw;
+    margin-top: 1vh;
+    text-align: center;
+    border-radius: 5vmin;
+}
+#choose
+{
+    padding: 5vmin;
+    color: white;
+    font-size: 7vmin;
+    font-weight: bolder;
+}
+
+#player button
+{
+    font-size: 4vmin;
+    height: 6vh;
+    width: 16vw;
+    margin-top: 8vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#inselect
+{
+    border-radius: 5vmin;
+    background-color: rgb(130, 21, 232);
+    margin-top: 30vh;
+    height: 35vh;
+    width: 35vw;
+    margin-left: 28vw;
+}

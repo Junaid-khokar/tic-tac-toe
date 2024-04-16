@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div id="select">
+            <div id="inselect">
+                <p id="choose">CHOOSE PLAYER</p>
+                <div id="player">
+                    <button onclick="onePlayer()">ONE PLAYER</button>
+                    <button onclick="twoPlayer()">TWO PLAYER</button>
+                </div>
+            </div>
+        </div>
+    
+    <h1 id="info">It's Move For X</h1>
+    <div id="container">
+        <div id="first">
+            <div class="inner brUpper brLeft" id="fin"></div>
+            <div class="inner brLeft"></div>
+            <div class="inner brLeft brBottom"></div>
+        </div>
+        <div id="second">
+            <div class="inner brUpper"></div>
+            <div class="inner"></div>
+            <div class="inner brBottom"></div>
+        </div>
+        <div id="third">
+            <div class="inner brRight brUpper"></div>
+            <div class="inner brRight"></div>
+            <div class="inner brRight brBottom"></div>
+        </div>
+        </div>
+        <div class="button">
+            <button id="btn" onclick="reset()">RESET</button>
+            <button id="back" onclick="back()">BACK</button>
+        </div>
+    
+</body>
+</html>

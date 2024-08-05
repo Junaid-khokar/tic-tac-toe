@@ -6,6 +6,10 @@ const win = new Audio("winner.mp3");
 const clapping = new Audio("clap.mp3")
 click.playbackRate = 3 ;
 var player ;
+let xWin = 0 ;
+let oWin = 0 ;
+let X = document.querySelector('.X-score');
+let O = document.querySelector('.O-score');
 
 document.addEventListener('click',function(e){
     
@@ -185,6 +189,8 @@ function isWin()
     if((div1=="X"&&div2=="X"&&div3=="X")||(div4=="X"&&div5=="X"&&div6=="X")||(div7=="X"&&div8=="X"&&div9=="X"))
     {
         document.getElementById('info').innerText = " Congratulation X is WINNER";
+        xWin++;
+        X.innerText = `X : ${xWin}` ;
         draw++;
         win.play();
         clapping.play();
@@ -192,6 +198,8 @@ function isWin()
     else if((div1=="X"&&div4=="X"&&div7=="X")||(div2=="X"&&div5=="X"&&div8=="X")||(div3=="X"&&div6=="X"&&div9=="X"))
     {
         document.getElementById('info').innerText = " Congratulation X is WINNER";
+        xWin++;
+        X.innerText = `X : ${xWin}` ;
         draw++;
         win.play();
         clapping.play();
@@ -199,6 +207,8 @@ function isWin()
     else if((div1=="X"&&div5=="X"&&div9=="X")||(div3=="X"&&div5=="X"&&div7=="X"))
     {
         document.getElementById('info').innerText = " Congratulation X is WINNER";
+        xWin++;
+        X.innerText = `X : ${xWin}` ;
         draw++;
         win.play();
         clapping.play();
@@ -206,6 +216,8 @@ function isWin()
     else if((div1=="O"&&div2=="O"&&div3=="O")||(div4=="O"&&div5=="O"&&div6=="O")||(div7=="O"&&div8=="O"&&div9=="O"))
     {
         document.getElementById('info').innerText = " Congratulation O is WINNER";
+        oWin++;
+        O.innerText = `X : ${oWin}` ;
         draw++;
         win.play();
         clapping.play();
@@ -213,6 +225,8 @@ function isWin()
     else if((div1=="O"&&div4=="O"&&div7=="O")||(div2=="O"&&div5=="O"&&div8=="O")||(div3=="O"&&div6=="O"&&div9=="O"))
     {
         document.getElementById('info').innerText = " Congratulation O is WINNER";
+        oWin++;
+        O.innerText = `X : ${oWin}` ;
         draw++;
         win.play();
         clapping.play();
@@ -220,6 +234,8 @@ function isWin()
     else if((div1=="O"&&div5=="O"&&div9=="O")||(div3=="O"&&div5=="O"&&div7=="O"))
     {
         document.getElementById('info').innerText = " Congratulation O is WINNER";
+        oWin++;
+        O.innerText = `X : ${oWin}` ;
         draw++;
         win.play();
         clapping.play();

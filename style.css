@@ -107,7 +107,7 @@ h1
     background-color: rgb(89, 24, 122);
     position: absolute;
     margin-left: 5vw;
-    margin-top: 1vh;
+    margin-top: .5vh;
     text-align: center;
     border-radius: 5vmin;
 }

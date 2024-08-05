@@ -138,17 +138,4 @@ h1
     width: 35vw;
     margin-left: 28vw;
 }
-.score-container
-{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.score-box{
-    margin-top: 1vmin;
-    width: 60vmin;
-    height: 4vmin;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-}
+
